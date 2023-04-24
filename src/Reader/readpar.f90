@@ -749,7 +749,7 @@ CONTAINS
                                               RS_sr0, RS_b, RS_iniSlipRate1, &
                                               RS_iniSlipRate2, pc_vStar, pc_prakashLength, t_0, RS_muW, &
                                               TP_thermalDiffusivity, TP_heatCapacity, TP_undrainedTPResponse, TP_IniTemp, TP_IniPressure, &
-                                              NucRS_sv0, r_s
+                                              NucRS_sv0, r_s, lsw_healingThreshold
 
     !------------------------------------------------------------------------
     NAMELIST                              /DynamicRupture/ FL, BackgroundType, &
@@ -759,7 +759,7 @@ CONTAINS
                                                 RS_sr0, RS_b, RS_iniSlipRate1, RS_iniSlipRate2, pc_vstar, &
                                                 thermalPress, TP_thermalDiffusivity, TP_heatCapacity, TP_undrainedTPResponse, TP_IniTemp, TP_IniPressure, &
                                                 pc_prakashLength, t_0, RS_muW, NucRS_sv0, r_s, RF_output_on, DS_output_on, &
-                                                OutputPointType, SlipRateOutputType, ModelFileName
+                                                OutputPointType, SlipRateOutputType, ModelFileName, lsw_healingThreshold
     !------------------------------------------------------------------------
 
     ! Setting default values

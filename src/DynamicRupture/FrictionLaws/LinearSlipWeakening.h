@@ -116,6 +116,11 @@ class LinearSlipWeakeningLaw : public BaseFrictionLaw<LinearSlipWeakeningLaw<Spe
       this->mu[ltsFace][pointIndex] =
           muS[ltsFace][pointIndex] -
           (muS[ltsFace][pointIndex] - muD[ltsFace][pointIndex]) * stateVariable[pointIndex];
+      // instantaneous healing
+      if (this->slipRateMagnitude[ltsFace][pointIndex] < this->drParameters->healingThreshold) {
+        this->mu[ltsFace][pointIndex] = muS[ltsFace][pointIndex];
+        stateVariable[pointIndex] = 0.0;
+      }
     }
   }
 
